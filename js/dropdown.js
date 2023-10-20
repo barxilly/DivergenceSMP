@@ -29,7 +29,12 @@ if (!isMobile) {
     navbarItems.innerHTML = navbarItems.innerHTML.replace("Home", "<i class='fa fa-home'></i>");
     navbarItems.innerHTML = navbarItems.innerHTML.replace("Members", "<i class='fa fa-users'></i>");
     var names = document.getElementsByClassName("name");
-    name.style.fontSize = "1.5em";
+    for (var i = 0; i < names.length; i++) {
+        var namei = names[i];
+        namei.style.fontSize = "2em";
+    }
+    var logo = document.getElementsByClassName("logo")[0];
+    logo.style.width = "30%";
     for (var i = 0; i < navbarDropdowns.length; i++) {
         var navbarDropdown = navbarDropdowns[i];
         var dropdownName = navbarDropdown.getElementsByTagName("a")[0];
