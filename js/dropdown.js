@@ -34,7 +34,7 @@ if (!isMobile) {
         namei.style.fontSize = "2em";
     }
     var logo = document.getElementsByClassName("logo")[0];
-    logo.style.width = "30%";
+    logo.style.width = "50%";
     for (var i = 0; i < navbarDropdowns.length; i++) {
         var navbarDropdown = navbarDropdowns[i];
         var dropdownName = navbarDropdown.getElementsByTagName("a")[0];

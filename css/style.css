@@ -1,3 +1,7 @@
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
 :root {
     --lightmode-bg-colour: rgb(216, 248, 248);
     --lightmode-nav-colour: #4f78c4;
@@ -25,7 +29,7 @@ navbar {
 items{
     display: flex;
     cursor: pointer;
-    user-select: none;
+    
     align-items: center;
 }
 .logo{
@@ -41,6 +45,7 @@ items{
     text-decoration: none;
     padding: 0 1rem;
     font-size: 1.2rem;
+    user-select: none;
     /* Place in vertical center */
     display: flex;
     align-items: center;
