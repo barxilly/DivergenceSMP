@@ -13,6 +13,18 @@
     --nav-text-hover-colour: #e6e6e6;
     --text-colour: black;
     --text-hover-colour: #343942;
+    --link-colour: #4067af;
+    --link-hover-colour: #327ea1;
+}
+
+a {
+    color: var(--link-colour);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-colour);
+    text-decoration: none;
 }
 
 body {
@@ -186,6 +198,7 @@ memberBio {
     font-size: 1.5em;
     text-align: center;
 }
+
 memberSocials {
     margin-top: 1.5em;
     background: var(--alt-bg-colour);
