@@ -28,6 +28,7 @@ if (!isMobile) {
     navbarItems.style.justifyContent = "space-between";
     navbarItems.innerHTML = navbarItems.innerHTML.replace("Home", "<i class='fa fa-home'></i>");
     navbarItems.innerHTML = navbarItems.innerHTML.replace("Members", "<i class='fa fa-users'></i>");
+    navbarItems.innerHTML = navbarItems.innerHTML.replace("Discord", "<i class='fab fa-discord'></i>");
     var names = document.getElementsByClassName("name");
     for (var i = 0; i < names.length; i++) {
         var namei = names[i];

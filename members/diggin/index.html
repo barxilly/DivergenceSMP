@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Divergence SMP | Kat.Beanie</title>
+        <title>Divergence SMP | Diggin Truths</title>
         <meta charset="utf-8">
-        <meta name="title" content="Divergence SMP | Kat.Beanie">
+        <meta name="title" content="Divergence SMP | Diggin Truths">
         <meta name="description" content="The Divergence SMP official website.">
         <meta name="keywords" content="Divergence SMP, Divergence, SMP, Minecraft, SMP Minecraft, SMP Server, SMP Minecraft Server, SMP Server Minecraft, SMP Minecraft Server, SMP Minecraft Server">
         <meta name="author" content="Divergence SMP">
@@ -29,19 +29,18 @@
         <div class="container">
             <div class="memberContent">
                 <memberTitleSection>
-                    <img src="/img/kat.jpg" alt="Template" class="memberPFP">
-                    <h1 class="memberName">Kat.Beanie</h1>
-                    <h2 class="memberTitle">Member & Owner</h2>
+                    <img src="/img/diggin.jpg" alt="Template" class="memberPFP">
+                    <h1 class="memberName">Diggin Truths</h1>
+                    <h2 class="memberTitle">Member</h2>
                     <h3 class="membershipSpan">S1 - Present</h3>
                 </memberTitleSection>
                 <memberBio>
-                    <p class="bio">Kat.Beanie is the owner of the Divergence SMP. </p>
+                    <p class="bio">Diggin is a very person. </p>
                 </memberBio>
                 <memberSocials>
                     <h1>Social Links:</h1>
-                    <social class="youtube" id="@Kat.Beanie"></social><br>
-                    <social class="twitter" id="@AutyMamma"></social><br>
-                    <social class="instagram" id="KatBeanie89"></social><br>
+                    <social id="@DigginTruths" class="youtube"></social><br>
+                    <social id="@instig8mischeif" class="twitter"></social><br>
                 </memberSocials>
             </div>
         </div>
@@ -54,9 +53,11 @@
                 var socialType = socialf.getAttribute("class");
                 console.log(socialID + " " + socialType);
                 if (socialType == "kick") {
-                    socialf.innerHTML = '<a href="https://kick.com/' + socialID + '" target="_blank"><i class="fab fa-kick"></i> ' + socialID + '</a>';
+                    socialf.innerHTML = '<a href="https://kick.com/' + socialID + '" target="_blank"><i class="fab fa-kick">K</i> ' + socialID + '</a>';
                     var icon = socialf.getElementsByTagName("i")[0];
-                    icon.style.color = "#BBFFBB";
+                    icon.style.color = "#00FF00";
+                    icon.style.fontFamily = "times new roman";
+                    icon.style.fontWeight = "bold";
                 } else if (socialType == "twitch") {
                     socialf.innerHTML = '<a href="https://twitch.tv/' + socialID + '" target="_blank"><i class="fab fa-twitch"></i> ' + socialID + '</a>';
                     var icon = socialf.getElementsByTagName("i")[0];

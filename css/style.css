@@ -3,19 +3,27 @@
 }
 
 :root {
-    --lightmode-bg-colour: rgb(216, 248, 248);
-    --lightmode-nav-colour: #4f78c4;
-    --lightmode-nav-item-colour: #4299c2;
+    --screen-width: 100vw;
+    --screen-height: 100vh;
+    --bg-colour: rgb(216, 248, 248);
+    --alt-bg-colour: rgb(169, 185, 185);
+    --nav-colour: #4f78c4;
+    --nav-item-colour: #4299c2;
+    --nav-text-colour: white;
+    --nav-text-hover-colour: #e6e6e6;
+    --text-colour: black;
+    --text-hover-colour: #343942;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    color: var(--text-colour);
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: var(--lightmode-bg-colour);
+    background-color: var(--bg-colour);
 }
 
 navbar {
@@ -23,7 +31,7 @@ navbar {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
-    background-color: var(--lightmode-nav-colour);
+    background-color: var(--nav-colour);
 }
 
 items{
@@ -40,7 +48,7 @@ items{
     height: auto;
 }
 .name{
-    color: white;
+    color: var(--nav-text-colour);
     text-decoration: none;
     padding: 0 1rem;
     font-size: 1.2rem;
@@ -50,7 +58,7 @@ items{
     align-items: center;
 }
 .name:hover{
-    color: #e6e6e6;
+    color: var(--nav-text-hover-colour);
 }
 
 dropdown{
@@ -59,11 +67,11 @@ dropdown{
 dropdown-content {
     display: none;
     position: absolute;
-    background: linear-gradient(to bottom, var(--lightmode-nav-colour), var(--lightmode-nav-item-colour));
+    background: linear-gradient(to bottom, var(--nav-colour), var(--nav-item-colour));
     border-top: 0;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    min-width: 100%;
+    min-width: 110%;
     min-height: fit-content;
     z-index: 1;
 }
@@ -71,7 +79,7 @@ dropdown-content a{
     font-size: 1em !important;
     text-decoration: none;
     padding: 0;
-    color: white;
+    color: var(--nav-text-colour);
 }
 
 .container{
@@ -109,4 +117,91 @@ dropdown-content a{
     list-style: square;
     margin: 0;
     padding: 0;
+}
+
+/* Section for the title that takes up 30% of the screen and shows a moving /img/sky.png background */
+titleSection{
+    color: white;
+    font-size: 2rem;
+    background: url(/img/sky.png) repeat-x;
+    background-size: 200% 200%;
+    animation: slide 30s ease infinite;
+    height: 100%;
+    width: var(--screen-width);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5em;
+    margin-top: 1em;
+}
+@keyframes slide {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.memberContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+}
+memberTitleSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.memberPFP {
+    border-radius: 50%;
+    width: 15em;
+    height: 15em;
+    margin-bottom: 0.5em;
+}
+.memberName {
+    font-size: 2.5em;
+    margin-bottom: 0em;
+}
+.memberTitle {
+    font-size: 1.5em;
+    margin-top: 0em;
+    margin-block: 0;
+}
+memberBio {
+    margin-top: 1.5em;
+    background: var(--alt-bg-colour);
+    border-radius: 10px;
+    padding: 1.5em;
+    max-width: 80vw;
+}
+.bio {
+    font-size: 1.5em;
+    text-align: center;
+}
+memberSocials {
+    margin-top: 1.5em;
+    background: var(--alt-bg-colour);
+    border-radius: 10px;
+    padding: 1.5em;
+}
+social {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+social a {
+    color: var(--text-colour);
+    text-decoration: none;
+}
+social a:hover {
+    color: var(--text-hover-colour);
+    text-decoration: none;
 }

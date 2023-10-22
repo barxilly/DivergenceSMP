@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Divergence SMP | Kat.Beanie</title>
+        <title>Divergence SMP | Past Members</title>
         <meta charset="utf-8">
-        <meta name="title" content="Divergence SMP | Kat.Beanie">
+        <meta name="title" content="Divergence SMP | Past Members">
         <meta name="description" content="The Divergence SMP official website.">
         <meta name="keywords" content="Divergence SMP, Divergence, SMP, Minecraft, SMP Minecraft, SMP Server, SMP Minecraft Server, SMP Server Minecraft, SMP Minecraft Server, SMP Minecraft Server">
         <meta name="author" content="Divergence SMP">
@@ -15,35 +15,26 @@
         <script src="https://kit.fontawesome.com/a644ebccdd.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <style>
-            .membershipSpan {
-                font-size: 1.25em;
-                font-weight: bold;
-                margin: 0;
-                padding: 0;
-                color: var(--text-hover-colour);
-            }
-        </style>
         <!-- Place Navbar.html -->
         <div id="navbar"></div>
         <div class="container">
+            <h1 style="font-size: 3em;">Past Members</h1>
             <div class="memberContent">
                 <memberTitleSection>
-                    <img src="/img/kat.jpg" alt="Template" class="memberPFP">
-                    <h1 class="memberName">Kat.Beanie</h1>
-                    <h2 class="memberTitle">Member & Owner</h2>
-                    <h3 class="membershipSpan">S1 - Present</h3>
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocLYwkYeE3EYkBBTfV4TEuEb9U4NJcApc596XyaQ7I23GyI=s288-c-no" alt="Template" class="memberPFP">
+                    <h1 class="memberName">Nota</h1>
+                    <h2 class="memberTitle">Ex-Member</h2>
+                    <h3 class="membershipSpan">S1 (1 Month)</h3>
                 </memberTitleSection>
                 <memberBio>
-                    <p class="bio">Kat.Beanie is the owner of the Divergence SMP. </p>
+                    <p class="bio">Nota was banned from the SMP after causing stress and arguements.</p>
                 </memberBio>
                 <memberSocials>
                     <h1>Social Links:</h1>
-                    <social class="youtube" id="@Kat.Beanie"></social><br>
-                    <social class="twitter" id="@AutyMamma"></social><br>
-                    <social class="instagram" id="KatBeanie89"></social><br>
+                    <social class="twitter" id="PissyPlaza"></social><br>
+                    <social class="youtube" id="@NotaNotas"></social><br>
                 </memberSocials>
-            </div>
+            </div><br><br>
         </div>
         <script>
             var social = document.getElementsByTagName("social");
@@ -66,7 +57,7 @@
                     var icon = socialf.getElementsByTagName("i")[0];
                     icon.style.color = "#FF0000";
                 } else if (socialType == "twitter") {
-                    socialf.innerHTML = '<a href="https://x.com/' + socialID + '" target="_blank"><i class="fab fa-twitter"></i> ' + socialID + '</a>';
+                    socialf.innerHTML = '<a href="https://twitter.com/' + socialID + '" target="_blank"><i class="fab fa-twitter"></i> ' + socialID + '</a>';
                     var icon = socialf.getElementsByTagName("i")[0];
                     icon.style.color = "#1da1f2";
                 } else if (socialType == "instagram") {
@@ -83,8 +74,10 @@
             var socials = document.getElementsByTagName("memberSocials");
             // Set to random pastel colour
             var pastelColours = ["#FFB3BA", "#FFDFBA", "#FFFFBA", "#B9FFBA", "#BAC4FF", "#FBB9FF"];
-            var randomColour = pastelColours[Math.floor(Math.random() * pastelColours.length)];
-            socials[0].style.background = randomColour;
+            for (var i = 0; i < socials.length; i++) {
+                var randomColour = pastelColours[Math.floor(Math.random() * pastelColours.length)];
+                socials[i].style.background = randomColour;
+            }
         </script>
         <script>
             $(function(){
