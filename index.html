@@ -13,26 +13,51 @@
         <script src="js/script.js"></script>
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="https://kit.fontawesome.com/a644ebccdd.js" crossorigin="anonymous"></script>
+        <script src="/js/mode.js"></script>
     </head>
     <body>
         <style>
             
         </style>
         <!-- Place Navbar.html -->
-        <div id="navbar"></div>
+        <div id="navbar"><navbar>
+            <items>
+                <a href="/" class="name">Home</a>
+                <a href="https://discord.gg/ZC67rSxuEx" class="name">Discord</a>
+                <dropdown>
+                    <a class="name">Members</a>
+                    <dropdown-content>
+                        <a href="/members/kat/">Kat.Beanie</a><br>
+                        <a href="/members/amanchoo/">Amanchoo</a><br>
+                        <a href="/members/silly/">Silly</a><br>
+                        <a href="/members/hoe/">AdorableHoe</a><br>
+                        <a href="/members/buster/">Buster Sharp</a><br>
+                        <a href="/members/sugar/">SugarSkull289</a><br>
+                        <a href="/members/diggin/">Diggin Truths</a><br>
+                        <a href="/members/maj/">MAJ_Madden</a><br>
+                        <a href="/members/badrabbit/">BadRabbit</a><br>
+                        <a href="/members/other/">Other</a><br>
+                    </dropdown-content>
+                </dropdown>
+                <a class="name" id="mode"><i class="fa fa-sun"></i></a>
+                <script src="/js/mode.js"></script>
+            </items>
+        </navbar>
+        <style>
+            .biglogo{
+                width: 50%;
+                height: auto;
+            }
+        </style>
         <div class="container">
             <div class="content">
                 <titleSection>
                     <!--  -->
-                    <h1>Welcome to the Divergence SMP!</h1>
+                    <img src="img/logo.png" alt="Divergence SMP Logo" class="biglogo">
                 </titleSection>
             </div>
         </div>
-        <script>
-            $(function(){
-              $("#navbar").load("/navbar.html");
-            });
-        </script>
+        <script src="/js/dropdown.js"></script></div>
         <script src="js/script.js"></script>
     </body>
 </html>

@@ -34,8 +34,14 @@ if (!isMobile) {
         var namei = names[i];
         namei.style.fontSize = "2em";
     }
-    var logo = document.getElementsByClassName("logo")[0];
-    logo.style.width = "50%";
+    try{
+        var logo = document.getElementsByClassName("logo")[0];
+        logo.style.width = "50%";
+    } catch (e) {
+        console.log(e);
+        var biglogo = document.getElementsByClassName("biglogo")[0];
+        biglogo.style.width = "100%";
+    }
     for (var i = 0; i < navbarDropdowns.length; i++) {
         var navbarDropdown = navbarDropdowns[i];
         var dropdownName = navbarDropdown.getElementsByTagName("a")[0];

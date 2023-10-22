@@ -8,6 +8,7 @@
     --bg-colour: rgb(216, 248, 248);
     --alt-bg-colour: rgb(169, 185, 185);
     --nav-colour: #4f78c4;
+    a: #642305;
     --nav-item-colour: #4299c2;
     --nav-text-colour: white;
     --nav-text-hover-colour: #e6e6e6;
@@ -137,7 +138,7 @@ titleSection{
     font-size: 2rem;
     background: url(/img/sky.png) repeat-x;
     background-size: 200% 200%;
-    animation: slide 30s ease infinite;
+    animation: slide 300s ease infinite;
     height: 100%;
     width: var(--screen-width);
     text-align: center;
@@ -151,13 +152,12 @@ titleSection{
     0% {
         background-position: 0% 50%;
     }
-    50% {
-        background-position: 100% 50%;
-    }
     100% {
-        background-position: 0% 50%;
+        background-position: 10000% 50%;
     }
 }
+
+
 
 .memberContent {
     display: flex;

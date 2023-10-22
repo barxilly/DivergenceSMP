@@ -42,10 +42,20 @@ var social = document.getElementsByTagName("social");
                 }
             }
 
-            var socials = document.getElementsByTagName("memberSocials");
-            // Set to random pastel colour
-            var pastelColours = ["#FFB3BA", "#FFDFBA", "#FFFFBA", "#B9FFBA", "#BAC4FF", "#FBB9FF"];
-            var randomColour = pastelColours[Math.floor(Math.random() * pastelColours.length)];
-            socials[0].style.background = randomColour;
-            randomColour = pastelColours[Math.floor(Math.random() * pastelColours.length)];
-            socials[1].style.background = randomColour;
+var socials = document.getElementsByTagName("memberSocials");
+// Set to random pastel colour
+var mode = document.cookie.split(";");
+const re = /mode=(\d+)/;
+var mode = document.cookie.match(re)[1];
+console.log("Mode" + mode);
+if (mode == "0") {
+    var pastelColours = ["#FFB3BA", "#FFDFBA", "#FFFFBA", "#B9FFBA", "#BAC4FF", "#FBB9FF"];
+} else if (mode == "1") {
+    var pastelColours = ["#052b72", "#0f3d09", "#3d0f0f", "#3d0f2f", "#3d2f0f", "#2f3d0f"];
+} else if (mode == "2") {
+    var pastelColours = ["#72490c", "#72490c"];
+}
+for (var i = 0; i < socials.length; i++) {
+    var randomColour = pastelColours[Math.floor(Math.random() * pastelColours.length)];
+    socials[i].style.background = randomColour;
+}
