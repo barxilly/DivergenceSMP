@@ -36,7 +36,7 @@ var social = document.getElementsByTagName("social");
                     var icon = socialf.getElementsByTagName("i")[0];
                     icon.style.color = "#3b5998";
                 } else if (socialType == "tiktok") {
-                    socialf.innerHTML = '<a href="https://tiktok.com/@' + socialID + '" target="_blank"><i class="fab fa-tiktok"></i> ' + socialID + '</a>';
+                    socialf.innerHTML = '<a href="https://tiktok.com/' + socialID + '" target="_blank"><i class="fab fa-tiktok"></i> ' + socialID + '</a>';
                     var icon = socialf.getElementsByTagName("i")[0];
                     icon.style.color = "#000";
                 }
