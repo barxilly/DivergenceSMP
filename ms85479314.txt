@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "divergencesmp.site",
+  "Id": "23f2d86b-443b-4813-9653-1c16f965c569"
+}
