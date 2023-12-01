@@ -1,4 +1,4 @@
-*{
+* {
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -47,20 +47,23 @@ navbar {
     background-color: var(--nav-colour);
 }
 
-items{
+items {
     display: flex;
     cursor: pointer;
-    
+
     align-items: center;
 }
-.logo{
+
+.logo {
     width: 20%;
 }
-.logo img{
+
+.logo img {
     width: 100% !important;
     height: auto;
 }
-.name{
+
+.name {
     color: var(--nav-text-colour);
     text-decoration: none;
     padding: 0 1rem;
@@ -70,13 +73,15 @@ items{
     display: flex;
     align-items: center;
 }
-.name:hover{
+
+.name:hover {
     color: var(--nav-text-hover-colour);
 }
 
-dropdown{
+dropdown {
     position: relative;
 }
+
 dropdown-content {
     display: none;
     position: absolute;
@@ -88,14 +93,15 @@ dropdown-content {
     min-height: fit-content;
     z-index: 1;
 }
-dropdown-content a{
+
+dropdown-content a {
     font-size: 1em !important;
     text-decoration: none;
     padding: 0;
     color: var(--nav-text-colour);
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,7 +139,7 @@ dropdown-content a{
 }
 
 /* Section for the title that takes up 30% of the screen and shows a moving /img/sky.png background */
-titleSection{
+titleSection {
     color: white;
     font-size: 2rem;
     background: url(/img/sky.png) repeat-x;
@@ -148,10 +154,12 @@ titleSection{
     border-radius: 0.5em;
     margin-top: 1em;
 }
+
 @keyframes slide {
     0% {
         background-position: 0% 50%;
     }
+
     100% {
         background-position: 10000% 50%;
     }
@@ -166,27 +174,32 @@ titleSection{
     justify-content: center;
     margin-top: 1em;
 }
+
 memberTitleSection {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .memberPFP {
     border-radius: 50%;
     width: 15em;
     height: 15em;
     margin-bottom: 0.5em;
 }
+
 .memberName {
     font-size: 2.5em;
     margin-bottom: 0em;
 }
+
 .memberTitle {
     font-size: 1.5em;
     margin-top: 0em;
     margin-block: 0;
 }
+
 memberBio {
     margin-top: 1.5em;
     background: var(--alt-bg-colour);
@@ -194,6 +207,7 @@ memberBio {
     padding: 1.5em;
     max-width: 80vw;
 }
+
 .bio {
     font-size: 1.5em;
     text-align: center;
@@ -205,16 +219,99 @@ memberSocials {
     border-radius: 10px;
     padding: 1.5em;
 }
+
 social {
     font-size: 1.5em;
     text-align: center;
     margin-bottom: 0.5em;
 }
+
 social a {
     color: var(--text-colour);
     text-decoration: none;
 }
+
 social a:hover {
     color: var(--text-hover-colour);
     text-decoration: none;
+}
+
+membersSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+membersSection a {
+    margin: 10px;
+}
+
+membersSection img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: 0.3s;
+}
+
+membersSection img:hover {
+    border: 2px solid #000;
+}
+
+.subheading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+articleBox {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: left;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2em;
+    margin: 10px;
+    transition: 0.3s;
+    width: 90%;
+}
+
+articleBox:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.articleTitle {
+    font-size: 2em;
+    text-align: left;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.articleText {
+    font-size: 1em;
+    text-align: left;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.articleLink {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+dividerInvisible {
+    width: 100%;
+    height: 2em;
+    margin: 10px;
 }
