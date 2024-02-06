@@ -10,112 +10,41 @@
         content="Divergence SMP, Divergence, SMP, Minecraft, SMP Minecraft, SMP Server, SMP Minecraft Server, SMP Server Minecraft, SMP Minecraft Server, SMP Minecraft Server">
     <meta name="author" content="Divergence SMP">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/dsmp.ico">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://kit.fontawesome.com/a644ebccdd.js" crossorigin="anonymous"></script>
-    <script src="js/mode.js"></script>
 </head>
 
 <body>
     <style>
+        body{
+            animation: zoominout 15s infinite;
+            /* Rainbow vortex */
+            background: radial-gradient(circle, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+            background-size: 400% 400%;
+        }
 
-    </style>
-    <!-- Place Navbar.html -->
-    <div id="navbar">
-        <navbar>
-            <items>
-                <a href="/" class="name">Home</a>
-                <a href="https://discord.gg/ZC67rSxuEx" class="name">Discord</a>
-                <dropdown>
-                    <a class="name">Members</a>
-                    <dropdown-content>
-                        <a href="members/kat/">Kat.Beanie</a><br>
-                        <a href="members/amanchoo/">Amanchoo</a><br>
-                        <a href="members/hoe/">AdorableHoe</a><br>
-                        <a href="/members/buster/">Buster Sharp</a><br>
-                        <a href="members/sugar/">SugarSkull289</a><br>
-                        <a href="members/diggin/">Diggin Truths</a><br>
-                        <a href="members/maj/">MAJ_Madden</a><br>
-                        <a href="members/badrabbit/">BadRabbit</a><br>
-                        <a href="members/other/">Other</a><br>
-                    </dropdown-content>
-                </dropdown>
-                <a class="name" id="mode"><i class="fa fa-sun"></i></a>
-                <script src="js/mode.js"></script>
-            </items>
-        </navbar>
-        <style>
-            .biglogo {
-                width: 50%;
-                height: auto;
+        @keyframes zoominout {
+            0% {
+                transform: scale(0.4);
+                background-position: 0% 50%;
             }
-        </style>
-        <div class="container">
-            <div class="content">
-                <titleSection>
-                    <!--  -->
-                    <img src="img/logo.png" alt="Divergence SMP Logo" class="biglogo">
-                </titleSection>
-
-            </div>
-            <membersSection>
-                <!-- Randomly place 5 members here -->
-            </membersSection>
-            <dividerInvisible></dividerInvisible>
-            <h2 class="subheading">Latest Bulletin</h2>
-            <a href="page/competition/" class="articleLink">
-                <articleBox>
-                    <h3 class="articleTitle">Divergence SMP Fan Competition</h3>
-                    <p class="articleText">We are hosting a fan competition! Don't miss out!</p>
-                </articleBox>
-            </a>
-        </div>
-        <script src="js/dropdown.js"></script>
-    </div>
-    <script src="js/script.js"></script>
-    <script>
-        var members = {
-            "kat": {
-                "name": "Kat.Beanie",
-                "pfp": "img/kat.jpg"
-            },
-            "amanchoo": {
-                "name": "Amanchoo",
-                "pfp": "img/amanchoo.jpg"
-            },
-            "hoe": {
-                "name": "AdorableHoe",
-                "pfp": "img/hoe.jpg"
-            },
-            "buster": {
-                "name": "Buster Sharp",
-                "pfp": "img/buster.jpg"
-            },
-            "maj": {
-                "name": "MAJ_Madden",
-                "pfp": "img/maj.jpg"
-            },
-            "sugar": {
-                "name": "SugarSkull289",
-                "pfp": "img/sugar.jpg"
+            50% {
+                transform: scale(0.8);
+                background-position: 100% 50%;
+            }
+            100% {
+                transform: scale(0.4);
+                background-position: 0% 50%;
             }
         }
-        var keys = Object.keys(members);
-        var random = keys[Math.floor(Math.random() * keys.length)];
-        keys.splice(keys.indexOf(random), 1);
-        var random2 = keys[Math.floor(Math.random() * keys.length)];
-        keys.splice(keys.indexOf(random2), 1);
-        var random3 = keys[Math.floor(Math.random() * keys.length)];
-        keys.splice(keys.indexOf(random3), 1);
-        var random4 = keys[Math.floor(Math.random() * keys.length)];
-        keys.splice(keys.indexOf(random4), 1);
-        var random5 = keys[Math.floor(Math.random() * keys.length)];
-        keys.splice(keys.indexOf(random5), 1);
-        document.querySelector("membersSection").innerHTML = "<a href='/members/" + random + "'><img src='" + members[random].pfp + "' alt='" + members[random].name + "'></a><a href='/members/" + random2 + "'><img src='" + members[random2].pfp + "' alt='" + members[random2].name + "'></a><a href='/members/" + random3 + "'><img src='" + members[random3].pfp + "' alt='" + members[random3].name + "'></a><a href='/members/" + random4 + "'><img src='" + members[random4].pfp + "' alt='" + members[random4].name + "'></a><a href='/members/" + random5 + "'><img src='" + members[random5].pfp + "' alt='" + members[random5].name + "'></a>";
-
-    </script>
+    </style>
+    <div style="justify-content: center; align-items: center; display: flex; flex-direction: column; height: 100vh;">
+        <img src="img/S2.png" alt="Divergence SMP: Season 2" style="width: 100%; height: auto;">
+        <h1 id="text" style="font-size: 3em; color: rgb(0, 0, 0); text-align: center; font-family: 'mc10';">Airing March 1st</h1>
+        </div>
 </body>
 
 </html>

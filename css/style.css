@@ -315,3 +315,8 @@ dividerInvisible {
     height: 2em;
     margin: 10px;
 }
+
+@font-face {
+    font-family: 'mc10';
+    src: url('mc10.ttf') format('truetype');
+}
