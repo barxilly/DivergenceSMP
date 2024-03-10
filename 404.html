@@ -1,37 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Divergence SMP</title>
-        <meta charset="utf-8">
-        <meta name="title" content="Divergence SMP">
-        <meta name="description" content="The Divergence SMP official website.">
-        <meta name="keywords" content="Divergence SMP, Divergence, SMP, Minecraft, SMP Minecraft, SMP Server, SMP Minecraft Server, SMP Server Minecraft, SMP Minecraft Server, SMP Minecraft Server">
-        <meta name="author" content="Divergence SMP">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="favicon.ico">
-        <link rel="stylesheet" href="/css/style.css">
-        <script src="/js/script.js"></script>
-        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://kit.fontawesome.com/a644ebccdd.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <!-- Place Navbar.html -->
-        <div id="navbar"></div>
-        <div class="container">
-            <div class="content404">
-                <h1>404</h1>
-                <h2>Page Not Found</h2>
-                <p>Sorry, but the page you were trying to view does not exist.</p>
-                <p>It looks like this was the result of either:</p>
+
+<head>
+    <title>Divergence SMP</title>
+    <meta charset="utf-8">
+    <meta name="title" content="Divergence SMP">
+    <meta name="description" content="The Divergence SMP official website.">
+    <meta name="keywords"
+        content="Divergence SMP, Divergence, SMP, Minecraft, SMP Minecraft, SMP Server, SMP Minecraft Server, SMP Server Minecraft, SMP Minecraft Server, SMP Minecraft Server">
+    <meta name="author" content="Divergence SMP">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/dsmp.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://kit.fontawesome.com/a644ebccdd.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Reith', sans-serif;
+        }
+        @font-face {
+            font-family: 'Reith';
+            src: url('css/woff/bbcreithsans_W_Bd.woff') format('woff');
+            font-weight: bold;
+        }
+        @font-face {
+            font-family: 'Reith';
+            src: url('css/woff/bbcreithsans_W_Lt.woff') format('woff');
+            font-weight: lighter;
+        }
+        @font-face {
+            font-family: 'Reith';
+            src: url('css/woff/bbcreithsans_W_Rg.woff') format('woff');
+            font-weight: normal;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25em;
+            background-color: #1f1f1f;
+            color: #fff;
+            width: 100%;
+        }
+        .navbar .menu ul {
+            display: flex;
+            list-style: none;
+        }
+        .navbar .menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .navbar .menu ul li a:hover {
+            color: #f4de62;
+        }
+        .navbar .menu ul li a i {
+            margin-right: 5px;
+        }
+        .navbar .logo img {
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"> 
+        <div class="navbar">
+            <div class="logo">
+                <a href="/"><img src="img/s2.png" id="logo" alt="Divergence SMP"></a>
+            </div>
+            <div class="menu">
                 <ul>
-                    <li>a mistyped address</li>
-                    <li>an out-of-date link</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="https://discord.gg/Zasr89qUKh"><i class="fab fa-discord"></i> Discord</a></li>
+                    <li><a href="https://vh0xf-my.sharepoint.com/:u:/g/personal/ben_barxsmith_sbs/Edf8AqevEnVEjUgF1h6NxHMBKq_pJGy_S19UvS_CEKML7A?e=FJDsca"><i class="fas fa-download"></i> Content Download</a></li>
                 </ul>
             </div>
-        <script>
-            $(function(){
-              $("#navbar").load("/navbar.html");
-            });
-        </script>
-    </body>
+        </div>
+        <div class="content">
+            <h1>404</h1>
+            <h2>Page Not Found</h2>
+            <p>Sorry, the page you are looking for does not exist.</p>
+            <a href="/">Return to Home</a>
+            </div>
+    </div>
+</body>
+
 </html>
