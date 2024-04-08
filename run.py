@@ -17,7 +17,7 @@ handler.cgi_directories = [""]
 # Set 404 page
 handler.error_message_format = open("404.html", "r").read()
 # Run the server
-httpd = server(server_address, handler)
-httpd.serve_forever()
+httpserver = server(server_address, handler)
+httpserver.serve_forever()
 
 

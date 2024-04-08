@@ -12,14 +12,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/dsmp.ico">
     <link rel="stylesheet" href="css/style.css">
-    
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://kit.fontawesome.com/a644ebccdd.js" crossorigin="anonymous"></script>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Reith', sans-serif;
+            font-family: 'SF Pro Display', 'Reith', sans-serif;
+        }
+        @font-face {
+            font-family: 'SF Pro Display';
+            src: url('https://github.com/nitidus/prosibum/raw/master/android/app/src/main/assets/fonts/SF-Pro-Display-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: italic;
         }
         @font-face {
             font-family: 'Reith';
@@ -38,20 +41,18 @@
             font-weight: normal;
         }
         .container {
-            width: 100%;
-            margin: 0 auto;
+            overflow-x: hidden;
+
         }
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 0;
-            padding-bottom: 0;
-            padding-left: 1.25em;
+            padding-top: 0.2em;
+            padding-bottom: 0.2em;
             padding-right: 1.25em;
-            background-color: #1f1f1f;
+            background-color: #000000;
             color: #fff;
-            width: 100%;
         }
         .navbar .menu ul {
             display: flex;
@@ -61,6 +62,7 @@
             color: #fff;
             text-decoration: none;
             padding: 10px 15px;
+            font-size: 1.2em;
             margin: 0 5px;
             border-radius: 5px;
             transition: 0.3s;
@@ -76,18 +78,38 @@
             width: fit-content;
         }
         .content {
-            text-align: center;
-            padding: 1em;
         }
-        .title {
-            font-size: 3em;
+        .mainUpdate {
+            background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('img/majs.png') no-repeat center;
+            backdrop-filter: brightness(50%);
+            -webkit-backdrop-filter: brightness(50%);
+            color: #cce7e3;
+            text-shadow: 2px 2px 5px #000;
+            padding: 20px;
+        }
+        .update {
+            font-size: 2em;
             font-weight: bold;
+            margin-top: 0;
+        }
+        .updateP {
+            font-size: 1.5em;
+            border-radius: 5px;
+        }
+        .download {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: 0.3s;
         }
     </style>
 </head>
 
 <body>
-    <div class="container"> 
+    <div class="container">
         <div class="navbar">
             <div class="logo">
                 <a href="/"><img src="img/S2.png" id="logo" alt="Divergence SMP"></a>
@@ -101,8 +123,11 @@
             </div>
         </div>
         <div class="content">
-            <h1 class="title">Welcome to Divergence SMP</h1>
-            <p>Our website is currently under construction. Please check back later.</p>
+            <div class="mainUpdate">
+                <h1 class="update">World download now available!</h1>
+                <p class="updateP">The world download for the Divergence SMP Season 1 is now available! Click the button below to download the world.</p>
+                <a href="https://drive.google.com/file/d/1LIxNJVkE6x7FCBAJHTKxb7Bq4IjC3fKi/view" class="download">Download World</a>
+            </div>
         </div>
     </div>
     <script src="js/script.js"></script>
