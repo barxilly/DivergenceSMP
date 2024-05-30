@@ -54,16 +54,84 @@
         </div>
     </div>
     <section class="py-4 py-xl-5" style="background: var(--bs-gray-100);">
-        <div class="container d-md-flex justify-content-md-center align-items-md-center h-100">
-            <div class="row d-md-flex justify-content-md-center align-items-md-center h-100">
-                <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center align-content-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
-                    <div class="d-md-flex justify-content-md-center align-items-md-center">
-                        <p class="text-center mb-4">A live YouTube feed will go here... Once I've coded it!</p>
+<h1>Latest Videos</h1>
+<div id="videos"></div>
+
+<script>
+    const API_KEY = 'AIzaSyC_TAGIluIVAmFKDKNYrfbAcrmkOGSL81g'; // Replace with your API key
+    const CHANNEL_ID = 'UCQAp47kpE5oCU6b3u6OwIJw'; // Replace with the desired channel ID
+
+    async function fetchVideos() {
+        const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=10`);
+        const data = await response.json();
+        const videosContainer = document.getElementById('videos');
+
+        data.items.forEach(item => {
+            const videoId = item.id.videoId;
+            const videoTitle = item.snippet.title;
+            const videoThumbnail = item.snippet.thumbnails.high.url;
+            const videoDescription = item.snippet.description;
+            const videoPublishedAt = item.snippet.publishedAt.split('T')[0];
+            
+            const videoElement = `
+                    <div class="video">
+                        <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank" class="video-link">
+                            <img src="${videoThumbnail}" alt="${videoTitle}" class="video-thumbnail">
+                            <div class="info">
+                            <h1 class="video-title">${videoTitle}</h1>
+                            <p class="video-description">${videoDescription}</p>
+                            <p class="video-published-at">${videoPublishedAt}</p>
+                            </div>
+                        </a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                `;
+            videosContainer.innerHTML += videoElement;
+        });
+    }
+
+    fetchVideos();
+</script>
+<style>
+    .video {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .video-link {
+        display: flex;
+        text-decoration: none;
+        color: black;
+    }
+    .video-thumbnail {
+        width: 20%;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .video-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
+    }
+    .video-description {
+        font-size: 1rem;
+        margin: 0;
+    }
+    .video-published-at {
+        font-size: 0.8rem;
+        margin: 0;
+    }
+    .break {
+        flex-basis: 100%;
+        height: 0;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+</style>
+</section>
     <footer class="text-center">
         <div class="container text-muted py-4 py-lg-5">
             <ul class="list-inline">
