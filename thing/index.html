@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="https://cdn.unicorn.studio/v1.2.6/unicornStudio.umd.js"></script>
+    </head>
+    <body>
+        <div
+  class="unicorn-embed"
+  data-us-project="unicorn"
+  data-us-project-src="unicorn.json"
+  data-us-scale="1"
+  data-us-dpi="1.5"
+  data-us-lazyload="true"
+  data-us-disableMobile="true"
+  data-us-alttext="Welcome to Unicorn Studio"
+  data-us-arialabel="This is a canvas scene"
+></div>
+<script>
+  UnicornStudio.init()
+    .then((scenes) => {
+      // Scenes are ready
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+</script>
+    </body>
+</html>
